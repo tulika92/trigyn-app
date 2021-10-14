@@ -1,0 +1,17 @@
+.menu_button {
+    padding: 10px 25px;
+    border-radius: 5px;
+    color: #000000;
+
+}
+
+.active_menu_button {
+    composes: menu_button;
+    background-color: #ef2731;
+    color: #ffffff;
+
+}
+
+.identity{
+    
+}

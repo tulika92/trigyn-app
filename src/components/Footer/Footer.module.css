@@ -1,0 +1,6 @@
+.base {
+    height: 128px;
+    /* border-radius: 0px; */
+    width: 100%;
+    background: rgb(67, 223, 67);
+}

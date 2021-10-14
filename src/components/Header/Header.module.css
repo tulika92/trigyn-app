@@ -1,0 +1,33 @@
+.base {
+  height: 81px;
+  display: flex;
+  width: 100%;
+/*   position: fixed;
+ */  background: pink;
+  justify-content: space-around;
+}
+
+.img {
+  float: left;
+  margin: 0px 33px;
+}
+
+.button_group {
+  display: flex;
+}
+.header {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 33px;
+}
+
+.right_header {
+  display: flex;
+  align-items: center;
+}
+
+.identity {
+  display: flex;
+  margin: 0px 30px;
+}
