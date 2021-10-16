@@ -6,6 +6,8 @@ import trigyn2 from "../../assets/images/trigyn2.jpeg";
 import trigyn3 from "../../assets/images/trigyn3.jpeg";
 import trigyn4 from "../../assets/images/trigyn4.jpeg";
 import trigyn5 from "../../assets/images/trigyn5.jpg";
+import back_arrow from "../../assets/icons/arrow_back_black.svg";
+
 import design from "../../assets/images/design_background.jpg";
 import software_dev from "../../assets/images/softaware_developement_background.jpg";
 import web_dev from "../../assets/images/web_dev_background.jpg";
@@ -28,29 +30,35 @@ const breakPoints = [
     { name: "Block Chain", no_of_courses: 20, img: trigyn5 },
   ];
 
-export default function ImageSlider() {
+export default function ImageSlider(props) {
   return (
     <div className="carousel-wrapper">
-      <Carousel breakPoints={breakPoints} className ={style.carousellll} disableArrowsOnEnd={false}>
-        {items.map((image) => (
-          <div
-            className={style.item}
-            style={{
-              backgroundImage: `url(${image.img})`,
-            }}
-          >
-            <div className={style.title}>
-              <h4>{image.name}</h4>
-              <h6>{`Over ${image.no_of_courses} Courses`}</h6>
-            </div>
-          </div>
+      <Carousel
+        breakPoints={breakPoints}
+        className={style.carousellll}
+        disableArrowsOnEnd={false}
+      >
+        {items.map((item) => (
+          <Image item={item} />
         ))}
       </Carousel>
-      {/* <Carousel breakPoints={breakPoints}>
-        {items.map((image) => (
-          <img src={image} alt="First slide" maxWidth="400px"/>
-        ))}
-      </Carousel> */}
+    </div>
+  );
+}
+
+function Image(props) {
+  const item = props.item;
+  return (
+    <div
+      className={style.item}
+      style={{
+        backgroundImage: `url(${item.img})`,
+      }}
+    >
+      <div className={style.title}>
+        <h4>{item.name}</h4>
+        <h6>{`Over ${item.no_of_courses} Courses`}</h6>
+      </div>
     </div>
   );
 }

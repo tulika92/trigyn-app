@@ -5,6 +5,8 @@ import Footer from "../../components/Footer/Footer";
 import CarouselComponent from "./CarouselComponent/CarouselComponent";
 import CourseCategories from "./CourseCategories/CourseCategories";
 import ImageSlider from "../../components/ImageSlider/ImageSlider";
+import Blog from "./Blog/Blog";
+import Courses from "./Courses/Courses";
 
 export default function HomePage() {
   return (
@@ -15,6 +17,8 @@ export default function HomePage() {
         <div className={style.body}>
           <CourseCategories />
           <ImageSlider />
+          <Courses />
+          <Blog />
         </div>
       </div>
       <Footer />
