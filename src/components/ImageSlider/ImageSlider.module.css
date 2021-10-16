@@ -1,0 +1,30 @@
+.image {
+  max-width: 200px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+  background-color: #00008b;
+  color: #fff;
+  margin: 0 15px;
+  font-size: 4em;
+  border-radius: 10px;
+  filter: blur(0.7px);
+  background-size: cover;
+}
+
+.title {
+}
+
+
+.button {
+  z-index: 11;
+  background-color: #ffffff;
+}
+
+.carousellll {
+}

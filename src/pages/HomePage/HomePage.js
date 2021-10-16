@@ -4,6 +4,7 @@ import style from "./HomePage.module.css";
 import Footer from "../../components/Footer/Footer";
 import CarouselComponent from "./CarouselComponent/CarouselComponent";
 import CourseCategories from "./CourseCategories/CourseCategories";
+import ImageSlider from "../../components/ImageSlider/ImageSlider";
 
 export default function HomePage() {
   return (
@@ -11,7 +12,10 @@ export default function HomePage() {
       <Header />
       <div className={style.App}>
         <CarouselComponent />
-        <CourseCategories />
+        <div className={style.body}>
+          <CourseCategories />
+          <ImageSlider />
+        </div>
       </div>
       <Footer />
     </div>
