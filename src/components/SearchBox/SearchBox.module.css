@@ -1,4 +1,16 @@
 .base {
+  background-color: inherit;
+  border: none;
+  height: 100%;
+  width: 100%;
+  color: inherit;
+}
+
+.base:focus {
+  outline: none;
+}
+
+.search {
   display: flex;
   width: 320px;
   height: 42px;
@@ -6,17 +18,10 @@
   background-color: #ededed;
   border-radius: 10px;
 }
-
-.search {
-  background-color: #ededed;
-  border: none;
-  height: 100%;
-  width: 100%;
-  padding: 0px 5px;
-  border-radius: 10px;
-  color: #646464;
-}
-
-.search:focus {
-  outline: none;
+.courses {
+  composes: search;
+  background-color: #ffffff;
+  padding-left:20px;
+  width: 560px;
+  height: 45px;
 }

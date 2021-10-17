@@ -17,6 +17,7 @@ export default function Header() {
   ];
 
   return (
+    <>
     <div className={style.base}>
       <div className={style.img}>
         <img src={trigyn_logo} name="trigyn-logo" />
@@ -37,6 +38,7 @@ export default function Header() {
           after_icon={true}
           value=""
           placeholder="Search For Anything"
+          style="search"
         />
         <div className={style.identity}>
           <img src={identity} name="identity" />
@@ -47,6 +49,8 @@ export default function Header() {
           />
         </div>
       </div>
-    </div>
+    </div> 
+    <div className={style.line}></div>
+    </>
   );
 }

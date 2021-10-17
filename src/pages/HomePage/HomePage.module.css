@@ -6,7 +6,6 @@
   margin: 50px 85px;
 }
 
-
 .App {
   text-align: center;
 }
@@ -44,4 +43,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
 }
