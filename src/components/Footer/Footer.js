@@ -29,6 +29,7 @@ export default function Footer() {
     "Accounts & Finance",
   ];
 
+  const socialImage = [facebook, linkedin, twitter, instagram];
   return (
     <>
       <div className={style.line}></div>
@@ -38,7 +39,7 @@ export default function Footer() {
           <div className={style.about_details}>
             <img
               src={location}
-              name="icon-location"
+              alt="icon-location"
               className={style.icon_location}
             />
             <div className={style.location}>
@@ -48,22 +49,18 @@ export default function Footer() {
             </div>
           </div>
           <div className={style.about_details}>
-            <img
-              src={phone}
-              name="icon-phone"
-              className={style.icon_location}
-            />
+            <img src={phone} alt="icon-phone" className={style.icon_location} />
             <div>91-22-6140-0909</div>
           </div>
         </div>
         <div className={style.links}>
           Quick Links
           <div className={style.links_details}>
-            {quick_links.map((item) => (
-              <div className={style.link_item}>
+            {quick_links.map((item, index) => (
+              <div key={index} className={style.link_item}>
                 <img
                   src={arrow_forward}
-                  name="arrow-forward"
+                  alt="arrow-forward"
                   className={style.icon_arrow_forward}
                 />
                 {item}
@@ -74,34 +71,25 @@ export default function Footer() {
         <div className={style.tag}>
           Tags
           <div className={style.tags_list}>
-            {tags.map((item) => (
-              <div className={style.tags_details}>{item}</div>
+            {tags.map((item, index) => (
+              <div key={index} className={style.tags_details}>
+                {item}
+              </div>
             ))}
           </div>
         </div>
         <div className={style.social_link}>
           Social Links
           <div className={style.social}>
-            <img
-              src={facebook}
-              name="icon-facebook"
-              className={style.icon_social}
-            />
-            <img
-              src={linkedin}
-              name="icon-linkedin"
-              className={style.icon_social}
-            />
-            <img
-              src={twitter}
-              name="icon-twitter"
-              className={style.icon_social}
-            />
-            <img
-              src={instagram}
-              name="icon-instagram"
-              className={style.icon_social}
-            />
+            {socialImage.map((item, index) => (
+              <img
+                src={item}
+                key={index}
+                alt="social"
+                name="icon-facebook"
+                className={style.icon_social}
+              />
+            ))}
           </div>
         </div>
       </div>
@@ -110,9 +98,11 @@ export default function Footer() {
           Copyright @ Trigyn Technologies Limited. All Rights Reserved.
         </div>
         <div className={style.right_text}>
-          <span style={{marginRight:"10px"}}>Privacy Policy</span>| 
-          <span style={{marginRight:"10px", marginLeft:"10px"}}>Terms of Use</span> | 
-          <span style={{marginLeft:"10px"}}>Disclaimer & Feedback</span>
+          <span style={{ marginRight: "10px" }}>Privacy Policy</span>|
+          <span style={{ marginRight: "10px", marginLeft: "10px" }}>
+            Terms of Use
+          </span>{" "}
+          |<span style={{ marginLeft: "10px" }}>Disclaimer & Feedback</span>
         </div>
       </div>
     </>

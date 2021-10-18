@@ -53,43 +53,52 @@ export default function Events() {
 
   return (
     <div className={style.base}>
-      <div className={style.heading}>
-        Events
-      </div>
+      <div className={style.heading}>Events</div>
       <div className={style.event_details}>
         {eventItems.map((item, index) => (
-          <div className={style.event}>
+          <div key={index} className={style.event}>
             <div className={style.headLine}>
               {item.title}
-              {index==activeIndex ? <img
-                src={upArrow}
-                className={style.icon_upArrow}
-                onClick={()=>toggle(index)}
-              ></img> : <img
-              src={chevron}
-              className={style.icon_upArrow}
-              onClick={()=>toggle(index)}
-            ></img> }
-              
+              {index === activeIndex ? (
+                <img
+                  src={upArrow}
+                  alt="Up Arrow"
+                  className={style.icon_upArrow}
+                  onClick={() => toggle(index)}
+                ></img>
+              ) : (
+                <img
+                  src={chevron}
+                  alt="down Arrow"
+                  className={style.icon_upArrow}
+                  onClick={() => toggle(index)}
+                ></img>
+              )}
             </div>
             <div className={style.details}>
               <div
                 className={
-                  index == activeIndex ? style.imageBox : style.imageBox_none
+                  index === activeIndex ? style.imageBox : style.imageBox_none
                 }
               ></div>
               <div>
                 <div className={style.image_text}>
-                  <img src={calendar} className={style.icon_image}></img>
-                  {item.date}<span style={{marginRight:"10px", marginLeft:"10px"}}>|</span>
-                  <img src={clock} className={style.icon_image}></img>
-                  {item.time}<span style={{marginRight:"10px", marginLeft:"10px"}}>|</span>
-                  <img src={location} className={style.icon_image}></img>
+                  <img src={calendar} alt="calendar" className={style.icon_image}></img>
+                  {item.date}
+                  <span style={{ marginRight: "10px", marginLeft: "10px" }}>
+                    |
+                  </span>
+                  <img src={clock} alt="clock" className={style.icon_image}></img>
+                  {item.time}
+                  <span style={{ marginRight: "10px", marginLeft: "10px" }}>
+                    |
+                  </span>
+                  <img src={location} alt="location" className={style.icon_image}></img>
                   {item.location}
                 </div>
                 <div
                   className={
-                    index == activeIndex
+                    index === activeIndex
                       ? style.description
                       : style.description_none
                   }

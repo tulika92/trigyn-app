@@ -32,7 +32,7 @@ export default function BlogDetails() {
       </div>
       <div className={style.details}>
         {blogItems.map((item, index) => (
-          <>
+          <React.Fragment key={index}>
             <div className={style.content}>
               <div className={style.imageBox}></div>
               <div>
@@ -47,7 +47,7 @@ export default function BlogDetails() {
             <div>
               {index < blogItems.length - 1 && <hr className={style.line} />}
             </div>
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>

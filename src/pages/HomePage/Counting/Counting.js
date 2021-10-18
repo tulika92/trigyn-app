@@ -15,11 +15,11 @@ export default function Counting() {
 
   return (
     <div className={style.base}>
-      {countingList.map((item) => (
-        <div className={style.list}>
+      {countingList.map((item, index) => (
+        <div key={index} className={style.list}>
           <img
             src={item.image}
-            name="icon-image"
+            alt="icon"
             className={style.icon_image}
           />
           <div className={style.count}>{item.count}+ </div>

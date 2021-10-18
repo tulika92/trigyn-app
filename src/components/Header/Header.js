@@ -24,18 +24,19 @@ export default function Header() {
     <>
       <div className={style.base}>
         <div className={style.img}>
-          <img src={trigyn_logo} name="trigyn-logo" />
+          <img src={trigyn_logo} alt="trigyn-logo" />
         </div>
         <div className={style.header}>
           <div className={style.button_group}>
             {HEADER_MENU_LIST.map((item, index) =>
-              index == activeTabIndex ? (
-                <Button name={item} value={item} style={"active_menu_button"} />
+              index === activeTabIndex ? (
+                <Button key={index} name={item} value={item} class={"active_menu_button"} />
               ) : (
                 <Button
+                  key={index}
                   name={item}
                   value={item}
-                  style={"menu_button"}
+                  class={"menu_button"}
                   onClick={() => onHandleClick(index)}
                 />
               )
@@ -47,14 +48,14 @@ export default function Header() {
             after_icon={true}
             value=""
             placeholder="Search For Anything"
-            style="search"
+            class="search"
           />
           <div className={style.identity}>
-            <img src={identity} name="identity" />
+            <img src={identity} alt="identity" />
             <Button
               name="login_register"
               value="Login/Register"
-              style={"identity"}
+              class={"identity"}
             />
           </div>
         </div>

@@ -38,8 +38,8 @@ export default function Dropdown({ title, items, onClick, value, styles }) {
   return (
     <div className={style[style ? styles : "base"]} ref={ref}>
       <div className={style.box} role="button" onClick={() => toggle(!isOpen)}>
-        <div className="title">{value != "" ? value : title}</div>
-        {<img src={isOpen ? open : close} name="dropdown" />}
+        <div className="title">{value !== "" ? value : title}</div>
+        {<img src={isOpen ? open : close} alt="dropdown" />}
       </div>
       {isOpen && (
         <div className={style.items}>

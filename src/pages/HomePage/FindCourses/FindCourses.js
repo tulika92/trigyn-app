@@ -26,7 +26,7 @@ export default function FindCourses() {
         <SearchBox
           before_icon={true}
           placeholder="Courses or Keyword"
-          style="courses"
+          class="courses"
         />
         <Dropdown
           title="Select Category"
@@ -35,7 +35,7 @@ export default function FindCourses() {
           onClick={(index) => onClick(index)}
           styles="category"
         />
-        <Button value="Find Courses" name="Find Courses" style="find_courses" />
+        <Button value="Find Courses" name="Find Courses" class="find_courses" />
       </div>
       <h2 className={style.h2}>Courses</h2>
       <div className = {style.course_details}>

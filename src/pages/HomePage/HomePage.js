@@ -25,7 +25,7 @@ export default function HomePage() {
               <Button
                 value="All Categories"
                 name="All Categories"
-                style="all_courses"
+                class="all_courses"
               />
             </div>
           </div>
@@ -36,7 +36,7 @@ export default function HomePage() {
               <Button
                 value="View All Courses"
                 name="View All Courses"
-                style="all_courses"
+                class="all_courses"
               />
             </div>
           </div>

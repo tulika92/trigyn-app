@@ -10,16 +10,16 @@ import style from "./CarouselComponent.module.css";
 
 export default function CarouselComponent() {
   const images = [trigyn1, trigyn2, trigyn3, trigyn4];
-  const next = <img src={next_icon} name="next_icon" />;
-  const prev = <img src={prev_icon} name="prev_icon" />;
+  const next = <img src={next_icon} alt="next" name="next_icon" />;
+  const prev = <img src={prev_icon} alt="previous" name="prev_icon" />;
 
   return (
     <Carousel fade={true} pause={false} controls={true} nextIcon={next} prevIcon={prev} variant="dark">
-      {images.map((image) => (
+      {images.map((image, index) => (
         <Carousel.Item
+          key={index}
           interval={2000}
           className={style.carousel}
-          keyboard={true}
         >
           <img className="d-block w-100" src={image} alt="First slide" />
   

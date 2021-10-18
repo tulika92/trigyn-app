@@ -2,11 +2,9 @@ import React from "react";
 import Carousel from "react-elastic-carousel";
 import trigyn4 from "../../assets/images/trigyn4.jpeg";
 import trigyn5 from "../../assets/images/trigyn5.jpg";
-import back_arrow from "../../assets/icons/arrow_back_black.svg";
 import design from "../../assets/images/design_background.jpg";
 import softwareDev from "../../assets/images/girlStudy.jpg";
 import laptop from "../../assets/images/laptop.jpg";
-import business from "../../assets/images/business_background.jpg";
 import people from "../../assets/images/people.jpg";
 import style from "./ImageSlider.module.css";
 
@@ -30,12 +28,11 @@ export default function ImageSlider(props) {
     <div className="carousel-wrapper">
       <Carousel
         breakPoints={breakPoints}
-        className={style.carousellll}
         disableArrowsOnEnd={false}
         pagination={false}
       >
-        {items.map((item) => (
-          <Image item={item} />
+        {items.map((item,index) => (
+          <Image key={index} item={item} />
         ))}
       </Carousel>
     </div>
@@ -51,7 +48,7 @@ function Image(props) {
         backgroundImage: `url(${item.img})`,
       }}
     >
-      <div className={style.title}>
+      <div>
         <h4>{item.name}</h4>
         <h6>{`Over ${item.no_of_courses} Courses`}</h6>
       </div>
