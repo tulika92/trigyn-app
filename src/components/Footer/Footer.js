@@ -56,7 +56,7 @@ export default function Footer() {
             <div>91-22-6140-0909</div>
           </div>
         </div>
-        <div className={style.about}>
+        <div className={style.links}>
           Quick Links
           <div className={style.links_details}>
             {quick_links.map((item) => (
@@ -71,7 +71,7 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className={style.about}>
+        <div className={style.tag}>
           Tags
           <div className={style.tags_list}>
             {tags.map((item) => (
@@ -79,7 +79,7 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className={style.about}>
+        <div className={style.social_link}>
           Social Links
           <div className={style.social}>
             <img
@@ -110,8 +110,9 @@ export default function Footer() {
           Copyright @ Trigyn Technologies Limited. All Rights Reserved.
         </div>
         <div className={style.right_text}>
-          {" "}
-          {`   Privacy      Policy | Terms of Use | Disclaimer&Feedback `}
+          <span style={{marginRight:"10px"}}>Privacy Policy</span>| 
+          <span style={{marginRight:"10px", marginLeft:"10px"}}>Terms of Use</span> | 
+          <span style={{marginLeft:"10px"}}>Disclaimer & Feedback</span>
         </div>
       </div>
     </>

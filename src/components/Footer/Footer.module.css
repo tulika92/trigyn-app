@@ -19,6 +19,8 @@
   padding: 25px 45px 20px;
   flex-direction: column;
   text-align: left;
+  margin-left: 50px;
+
 }
 
 .about_details {
@@ -35,6 +37,14 @@
   display: flex;
 }
 
+.links{
+  color: white;
+  display: flex;
+  padding: 25px 45px 20px;
+  flex-direction: column;
+  text-align: left;
+
+}
 .links_details {
   flex-direction: column;
   padding-top: 20px;
@@ -57,7 +67,12 @@
   margin-bottom: 20px;
 }
 
-.tags {
+.tag{
+  color: white;
+  display: flex;
+  padding: 25px 45px 20px;
+  flex-direction: column;
+  text-align: left;
 }
 
 .tags_list {
@@ -77,6 +92,14 @@
   background-color: #888888;
 }
 
+.social_link{
+  color: white;
+  display: flex;
+  padding: 25px 45px 20px;
+  flex-direction: column;
+  text-align: left;
+  margin-right:150px;
+}
 .social {
   padding-top: 20px;
 }
@@ -99,10 +122,13 @@
   padding-left: 75px;
   padding-top: 5px;
   color: #a3a3a3;
+  font-weight: 500;
+
 }
 
 .right_text {
   padding-right: 75px;
   padding-top: 5px;
   color: #a3a3a3;
+  font-weight: 500;
 }

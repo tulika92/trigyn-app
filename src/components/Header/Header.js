@@ -8,6 +8,10 @@ import identity from "../../assets/icons/identity.svg";
 export default function Header() {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
+  const onHandleClick = (index) => {
+    setActiveTabIndex(index);
+  };
+
   const HEADER_MENU_LIST = [
     "Home",
     "Courses",
@@ -18,39 +22,44 @@ export default function Header() {
 
   return (
     <>
-    <div className={style.base}>
-      <div className={style.img}>
-        <img src={trigyn_logo} name="trigyn-logo" />
-      </div>
-      <div className={style.header}>
-        <div className={style.button_group}>
-          {HEADER_MENU_LIST.map((item, index) =>
-            index == activeTabIndex ? (
-              <Button name={item} value={item} style={"active_menu_button"} />
-            ) : (
-              <Button name={item} value={item} style={"menu_button"} />
-            )
-          )}
+      <div className={style.base}>
+        <div className={style.img}>
+          <img src={trigyn_logo} name="trigyn-logo" />
         </div>
-      </div>
-      <div className={style.right_header}>
-        <SearchBox
-          after_icon={true}
-          value=""
-          placeholder="Search For Anything"
-          style="search"
-        />
-        <div className={style.identity}>
-          <img src={identity} name="identity" />
-          <Button
-            name="login_register"
-            value="Login/Register"
-            style={"identity"}
+        <div className={style.header}>
+          <div className={style.button_group}>
+            {HEADER_MENU_LIST.map((item, index) =>
+              index == activeTabIndex ? (
+                <Button name={item} value={item} style={"active_menu_button"} />
+              ) : (
+                <Button
+                  name={item}
+                  value={item}
+                  style={"menu_button"}
+                  onClick={() => onHandleClick(index)}
+                />
+              )
+            )}
+          </div>
+        </div>
+        <div className={style.right_header}>
+          <SearchBox
+            after_icon={true}
+            value=""
+            placeholder="Search For Anything"
+            style="search"
           />
+          <div className={style.identity}>
+            <img src={identity} name="identity" />
+            <Button
+              name="login_register"
+              value="Login/Register"
+              style={"identity"}
+            />
+          </div>
         </div>
       </div>
-    </div> 
-    <div className={style.line}></div>
+      <div className={style.line}></div>
     </>
   );
 }

@@ -7,10 +7,10 @@ import certificate from "../../../assets/icons/certificate.png";
 
 export default function Counting() {
   const countingList = [
-    { image: graduation, count: "200+", text: "Students" },
-    { image: book, count: "450+", text: "Courses" },
-    { image: star, count: "200+", text: "Ratings" },
-    { image: certificate, count: "500+", text: "Projects" },
+    { image: graduation, count: "200", text: "Students" },
+    { image: book, count: "450", text: "Courses" },
+    { image: star, count: "200", text: "Ratings" },
+    { image: certificate, count: "500", text: "Projects" },
   ];
 
   return (
@@ -22,7 +22,7 @@ export default function Counting() {
             name="icon-image"
             className={style.icon_image}
           />
-          <div className={style.count}>{item.count} </div>
+          <div className={style.count}>{item.count}+ </div>
           <div className={style.description}>{item.text}</div>
         </div>
       ))}

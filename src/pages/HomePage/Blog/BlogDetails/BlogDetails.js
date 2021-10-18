@@ -28,39 +28,28 @@ export default function BlogDetails() {
   return (
     <div className={style.base}>
       <div className={style.heading}>
-        <h1>Blogs</h1>
+        Blogs
       </div>
       <div className={style.details}>
-        {blogItems.map((item) => (
+        {blogItems.map((item, index) => (
           <>
             <div className={style.content}>
               <div className={style.imageBox}></div>
               <div>
                 <div className={style.title}>{item.title}</div>
                 <div className={style.date}>
-                  {item.date}|{item.comment}
+                 <span style={{marginRight:"10px"}}>{item.date}</span> | 
+                 <span style={{marginLeft:"10px"}}>{item.comment}</span> 
                 </div>
                 <div className={style.text}>{item.text}</div>
               </div>
             </div>
             <div>
-              <hr className={style.line} />
+              {index < blogItems.length - 1 && <hr className={style.line} />}
             </div>
           </>
         ))}
-        {/*       <div className={style.imageBox}></div>
-         */}
-        {/* <div className={style.imageBox}></div>
-      <div className={style.details}>
-        <div className={style.title}>A Solution built for Teachers</div>
-        <div className={style.date}>December 27,2019 | 4 Comments </div>
-        <div className={style.text}>
-          Cum doctus civibus efficiantur in imperdiet deterruisset.
-          Cum doctus civibus efficiantur in imperdiet deterruisset.
-        </div> */}
       </div>
-      {/*       <hr className={style.line} />
-       */}
     </div>
   );
 }

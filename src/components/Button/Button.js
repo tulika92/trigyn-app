@@ -3,8 +3,8 @@ import style from "./Button.module.css";
 
 export default function Button(props) {
   return (
-    <div className={style[props.style]}>
-        {props.value}
+    <div className={style[props.style]} onClick={props.onClick}>
+      {props.value}
     </div>
   );
 }

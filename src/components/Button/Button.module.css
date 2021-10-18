@@ -1,7 +1,8 @@
 .menu_button {
   padding: 10px 25px;
-  border-radius: 5px;
+  border-radius: 10px;
   color: #000000;
+  cursor: pointer;
 }
 
 .active_menu_button {
@@ -17,6 +18,10 @@
   composes: active_menu_button;
   font-size: 21px;
   font-weight: 600;
-  border-radius: 10px;
   padding: 12px 20px;
+}
+
+.find_courses {
+  composes: active_menu_button;
+  font-size: 16px;
 }

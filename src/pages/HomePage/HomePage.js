@@ -3,7 +3,6 @@ import Header from "../../components/Header/Header";
 import style from "./HomePage.module.css";
 import Footer from "../../components/Footer/Footer";
 import CarouselComponent from "./CarouselComponent/CarouselComponent";
-import CourseCategories from "./CourseCategories/CourseCategories";
 import ImageSlider from "../../components/ImageSlider/ImageSlider";
 import Blog from "./Blog/Blog";
 import Courses from "./Courses/Courses";
@@ -18,24 +17,30 @@ export default function HomePage() {
       <div className={style.App}>
         <CarouselComponent />
         <div className={style.body}>
-          <CourseCategories />
+          <div className={style.text_one}>Courses Categories</div>
+          <div className={style.text_two}>Cum doctos civibus efficantur in imperdiet deterruisset</div>
           <ImageSlider />
-          <div className={style.button}>
-            <Button
-              value="All Categories"
-              name="All Categories"
-              style="all_courses"
-            />
+          <div style={{ marginTop: "40px" }}>
+            <div className={style.button}>
+              <Button
+                value="All Categories"
+                name="All Categories"
+                style="all_courses"
+              />
+            </div>
           </div>
           <FindCourses />
           <Courses />
-          <div className={style.button}>
-            <Button
-              value="View All Courses"
-              name="View All Courses"
-              style="all_courses"
-            />
+          <div style={{ marginTop: "40px" }}>
+            <div className={style.button}>
+              <Button
+                value="View All Courses"
+                name="View All Courses"
+                style="all_courses"
+              />
+            </div>
           </div>
+
           <Counting />
 
           <Blog />

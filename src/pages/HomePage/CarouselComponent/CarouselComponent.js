@@ -3,7 +3,6 @@ import trigyn1 from "../../../assets/images/trigyn1.jpeg";
 import trigyn2 from "../../../assets/images/trigyn2.jpeg";
 import trigyn3 from "../../../assets/images/trigyn3.jpeg";
 import trigyn4 from "../../../assets/images/trigyn4.jpeg";
-import trigyn5 from "../../../assets/images/trigyn5.jpg";
 import prev_icon from "../../../assets/icons/arrow_back_black.svg";
 import next_icon from "../../../assets/icons/arrow_forward_black.svg";
 import { Carousel } from "react-bootstrap";
@@ -23,10 +22,7 @@ export default function CarouselComponent() {
           keyboard={true}
         >
           <img className="d-block w-100" src={image} alt="First slide" />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
+  
         </Carousel.Item>
       ))}
     </Carousel>

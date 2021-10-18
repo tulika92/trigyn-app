@@ -103,6 +103,7 @@ export default function Courses() {
         breakPoints={breakPoints}
         className={style.carousellll}
         disableArrowsOnEnd={false}
+        pagination={false}
       >
         {courses.map((item) => (
           <Course item={item} />
@@ -147,7 +148,7 @@ function Course(props) {
       </div>
       <div className={style.author}>By {item.author}</div>
       <div className={style.exp}>
-        {item.experience} yrs of experience in {item.dept}
+        {item.experience}+ yrs of experience in {item.dept}
       </div>
     </div>
   );
